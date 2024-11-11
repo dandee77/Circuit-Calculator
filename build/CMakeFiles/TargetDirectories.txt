@@ -1,0 +1,3 @@
+C:/Users/dande/Desktop/IDK/build/CMakeFiles/OpenCVExample.dir
+C:/Users/dande/Desktop/IDK/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/dande/Desktop/IDK/build/CMakeFiles/ZERO_CHECK.dir
