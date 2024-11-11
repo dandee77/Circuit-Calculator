@@ -1,0 +1,3 @@
+C:/Users/dande/Desktop/IDK/build/_deps/raylib-subbuild/CMakeFiles/raylib-populate.dir
+C:/Users/dande/Desktop/IDK/build/_deps/raylib-subbuild/CMakeFiles/ALL_BUILD.dir
+C:/Users/dande/Desktop/IDK/build/_deps/raylib-subbuild/CMakeFiles/ZERO_CHECK.dir

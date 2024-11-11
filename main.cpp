@@ -1,19 +1,25 @@
-#include <opencv2/opencv.hpp>
-#include <iostream>
+#include <raylib.h>
+
 
 int main() {
-    // Load an image (make sure you have a sample image in the project directory)
-    cv::Mat image = cv::imread("pace.png");
+    // Initialization
+    const int screenWidth = 800;
+    const int screenHeight = 450;
 
-    // Check if the image was loaded successfully
-    if (image.empty()) {
-        std::cerr << "Could not open or find the image!\n";
-        return -1;
+    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
+
+    SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
+
+    // Main game loop
+    while (!WindowShouldClose())    // Detect window close button or ESC key
+    {
+        // Update
+        BeginDrawing();
+        ClearBackground(RAYWHITE);
+        EndDrawing();
     }
 
-    // Display the image in an OpenCV window
-    cv::imshow("Display Window", image);
-    cv::waitKey(0); // Wait for a key press before closing the window
+    // De-Initialization
 
-    return 0;
+    CloseWindow();        // Close window and OpenGL context
 }

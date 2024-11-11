@@ -4,7 +4,8 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:/opencv/build/include"
+                "C:/opencv/build/include",
+                "${workspaceFolder}/build/_deps/raylib-build/raylib/include"
             ],
             "defines": [
                 "_DEBUG",
