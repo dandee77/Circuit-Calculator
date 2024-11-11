@@ -1,0 +1,6 @@
+{
+    "cmake.automaticReconfigure": false,
+    "cmake.configureOnEdit": false,
+    "cmake.configureOnOpen": false,
+    "C_Cpp.default.compilerPath": "cl.exe"
+}
