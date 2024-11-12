@@ -17,7 +17,7 @@ A powerful tool for analyzing electrical circuits, providing matrix notation and
 - **Libraries** 
     - [OpenCV](https://opencv.org/releases/) for image processing.
     - [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) for AI-based text recognition
-        - Downlaod the [Tesseract Language Data Files](https://github.com/tesseract-ocr/tessdata)
+        - Download the `eng.traineddata` file in [Tesseract Language Data Files](https://github.com/tesseract-ocr/tessdata)
     - [Raylib](https://www.raylib.com/) for the graphical user interface
 
 

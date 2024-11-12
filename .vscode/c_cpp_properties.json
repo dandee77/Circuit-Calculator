@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "C:/opencv/build/include",
-                "${workspaceFolder}/build/_deps/raylib-build/raylib/include"
+                "${workspaceFolder}/build/_deps/raylib-build/raylib/include",
+                "C:/tools/vcpkg/installed/x64-windows/include"
             ],
             "defines": [
                 "_DEBUG",

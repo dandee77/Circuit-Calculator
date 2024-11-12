@@ -33,8 +33,17 @@ list(APPEND CMAKE_PREFIX_PATH "C:/tools/vcpkg/installed/x64-windows/share/tesser
 find_package(Tesseract REQUIRED)
 include_directories(${Tesseract_INCLUDE_DIRS}) # Optional: Ensure headers are included
 
-# Define executable
-add_executable(${PROJECT_NAME} main.cpp)
+# Define the source directory
+set(SRC_DIR ${CMAKE_SOURCE_DIR}/src)
+
+# Automatically collect all source and header files
+file(GLOB_RECURSE SOURCES "${SRC_DIR}/*.cpp" "${SRC_DIR}/*.hpp")
+
+# Define the executable and include the collected files
+add_executable(${PROJECT_NAME} ${SOURCES})
+
+# Include the src directory for header file lookup
+target_include_directories(${PROJECT_NAME} PRIVATE ${SRC_DIR})
 
 # Link libraries
 target_link_libraries(${PROJECT_NAME} PRIVATE 
