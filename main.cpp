@@ -1,25 +1,26 @@
-#include <raylib.h>
+#include <tesseract/baseapi.h>
+#include <leptonica/allheaders.h>
+#include <iostream>
 
-
+// Testing
 int main() {
-    // Initialization
-    const int screenWidth = 800;
-    const int screenHeight = 450;
-
-    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
-
-    SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
-
-    // Main game loop
-    while (!WindowShouldClose())    // Detect window close button or ESC key
-    {
-        // Update
-        BeginDrawing();
-        ClearBackground(RAYWHITE);
-        EndDrawing();
+    tesseract::TessBaseAPI *api = new tesseract::TessBaseAPI();
+    
+    // Initialize Tesseract with English language
+    if (api->Init(NULL, "eng")) {
+        std::cerr << "Could not initialize tesseract.\n";
+        return 1;
     }
+    
+    Pix *image = pixRead("pace.png");
+    api->SetImage(image);
+    
+    char *outText = api->GetUTF8Text();
+    std::cout << "OCR Output: " << outText;
 
-    // De-Initialization
-
-    CloseWindow();        // Close window and OpenGL context
+    api->End();
+    delete[] outText;
+    pixDestroy(&image);
+    
+    return 0;
 }
